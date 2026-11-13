@@ -1,0 +1,17 @@
+{
+  "name": "craton",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Craton: Africa's 3D geology course. Offline-first PWA built with React (htm, no build step) and Three.js.",
+  "scripts": {
+    "css": "tailwindcss -c tailwind.config.js -i src/input.css -o app/css/tailwind.css --minify",
+    "css:watch": "tailwindcss -c tailwind.config.js -i src/input.css -o app/css/tailwind.css --watch",
+    "start": "serve app -l 8080",
+    "landing": "serve landing -l 8081",
+    "export:review": "node docs/export-content-review.js"
+  },
+  "devDependencies": {
+    "serve": "14.2.4",
+    "tailwindcss": "3.4.17"
+  }
+}

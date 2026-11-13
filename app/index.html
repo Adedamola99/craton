@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Craton</title>
+<meta name="description" content="Craton: Africa's 3D geology course. 23 interactive 3D topics, exam practice and a daily challenge.">
+<meta name="theme-color" content="#E7ECE8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/craton.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- Vendored libraries (no CDN needed, works offline) -->
+<script src="lib/react.production.min.js"></script>
+<script src="lib/react-dom.production.min.js"></script>
+<script src="lib/htm.umd.js"></script>
+<script src="lib/three.min.js"></script>
+<script src="lib/OrbitControls.js"></script>
+
+<!-- App code, in dependency order -->
+<script src="js/01-core.js"></script>
+<script src="js/02-block-engine.js"></script>
+<script src="js/03-ui.js"></script>
+<script src="js/04-block.js"></script>
+<script src="js/05-stereonet.js"></script>
+<script src="js/06-field.js"></script>
+<script src="js/10-atlas-models-a.js"></script>
+<script src="js/11-atlas-models-b.js"></script>
+<script src="js/12-atlas-models-c.js"></script>
+<script src="js/13-atlas-library.js"></script>
+<script src="js/19-nigeria-geo.js"></script>
+<script src="js/20-craton.js"></script>
+<script src="js/25-sync.js"></script>
+<script src="js/26-classroom.js"></script>
+<script src="js/30-app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') { window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); }); }
+</script>
+</body>
+</html>
